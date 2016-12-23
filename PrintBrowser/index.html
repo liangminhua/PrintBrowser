@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>PrintTest</h1>
+    <div id="printers"></div>
+    <button onclick="print()">PrintSomething</button>
+</body>
+<script>
+    var printers = Internal.getPrinters();
+    for (var i = 0; i < printers.length; ++i) {
+        var radio = "<input name='currentPrinter' type='radio' value='" + printers[i] + "'>" + printers[i] + "</input><br>";
+        document.getElementById('printers').innerHTML += radio;
+    }
+    function print() {
+        var currentPrinter= null;
+        var radios = document.getElementsByTagName('input');
+        for (var i = 0; i < radios.length; ++i) {
+            if (radios[i].checked) {
+                console.log(radios[i].value);
+                currentPrinter =radios[i].value;
+            }
+        }
+        var template = ' \
+        <FlowDocument PagePadding="0" \
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"> \
+         <Paragraph TextAlignment="Center">Print Test</Paragraph> \
+         </FlowDocument> \
+         ';
+        Internal.print(currentPrinter,template);
+    }
+</script>
+
+</html>

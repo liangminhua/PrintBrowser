@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CefSharp.Wpf;
 
 namespace PrintBrowser
 {
@@ -23,6 +24,9 @@ namespace PrintBrowser
         public MainWindow()
         {
             InitializeComponent();
+            MenuHandler menuHandler = new MenuHandler();
+            webBrowser.MenuHandler = menuHandler;
+            webBrowser.RegisterJsObject("Internal", new Internal());
         }
     }
 }

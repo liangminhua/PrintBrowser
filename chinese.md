@@ -1,14 +1,14 @@
-# PrintBrowser # 
+# PrintBrowser #
 
 PrintBrowser是一个网页打印的客户端。
 [Xaml](https://msdn.microsoft.com/library/cc295302.aspx)作为打印模板语言，
 比使用ESC/TSC命令更容易打印出复杂的内容。
 
-## 功能 ##
+## 功能
 
-*[Internal.getPrinters](#getprinters)
+* [Internal.getPrinters](#getprinters)
 
-*[Internal.print](#print)
+* [Internal.print](#print)
 
 ### getPrinters ###
 

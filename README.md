@@ -1,4 +1,4 @@
-# PrintBrowser #  
+# PrintBrowser
 
 PrintBrowser is a client for printing content in front-end without extra popups.
 Using [Xaml](https://msdn.microsoft.com/library/cc295302.aspx) as the print template language makes it easier to print complex content than using the ESC / TSC command.
